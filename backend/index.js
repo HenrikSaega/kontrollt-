@@ -20,10 +20,9 @@ app.get("/meals", async (req, res) => {
   const mealsPath = path.join(__dirname, "data", "meals.json");
   //console.log("/meals töötab")
 
-  const data = await fs.readFile(mealsPath, "utf-8");
-  console.log("Meals JSON andmed:", data);
-  const meals = JSON.parse(data)
-  res.json(JSON.parse(data));
+  const meals = await fs.readFile(mealsPath, "utf-8");
+  //console.log("Meals JSON andmed:", meals);
+  res.json(JSON.parse(meals));
 });
 
 app.use((req, res) => {
@@ -34,4 +33,4 @@ app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
 });
 
-app.listen(3000); // Changed 3001 => 3000
+app.listen(3000);
