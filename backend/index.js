@@ -18,10 +18,10 @@ app.use((req, res, next) => {
 
 app.get("/meals", async (req, res) => {
   const mealsPath = path.join(__dirname, "data", "meals.json");
-  //console.log("/meals töötab")
+  console.log("/meals töötab")
 
   const meals = await fs.readFile(mealsPath, "utf-8");
-  //console.log("Meals JSON andmed:", meals);
+  console.log("Meals JSON andmed:", meals);
   res.json(JSON.parse(meals));
 });
 
@@ -33,4 +33,4 @@ app.use((req, res) => {
   res.status(404).json({ message: "Not found" });
 });
 
-app.listen(3000);
+app.listen(3001);
