@@ -16,7 +16,7 @@ const Header = () => {
                 <h1>React Food Order App</h1>
             </div>
             <nav>
-            <button className="text-button">{totalItems}</button>
+            <button className="text-button">Cart({totalItems})</button>
             </nav>
         </header>
     )
