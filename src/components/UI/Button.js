@@ -4,7 +4,7 @@ const Button = (props) => {
         return(<button className="text-button">Add to Cart</button>)
     } 
     else{
-        return(<button className="button">Add to Cart</button>)
+        return(<button className="button" onClick={props.onClick}>Add to Cart</button>)
     }
 }
 
