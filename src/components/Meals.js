@@ -11,7 +11,6 @@ const Meals = () => {
         })
           
         .then((mealsData) => {
-            console.log(mealsData)
             setMeals(mealsData)
         })
     }, [])

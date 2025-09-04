@@ -9,14 +9,12 @@ const MealItem = (props) => {
         props.meal.price)
 
     function handleAddToCart() {
-        console.log("Toode lisatud!")
         const item = {
             id: props.meal.id,
             name: props.meal.name,
             price: props.meal.price,
             amount: 1
         }
-        console.log("Lisatav toode: ", item);
         addToCart(item);
     }
     

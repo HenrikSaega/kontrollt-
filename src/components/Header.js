@@ -1,6 +1,6 @@
 import logo from '../assets/logo.jpg'
 import { CartContext } from '../store/CartContext'
-import react, { useContext } from 'react'
+import { useContext } from 'react'
 
 const Header = () => {
     const { cartItems } = useContext(CartContext);
